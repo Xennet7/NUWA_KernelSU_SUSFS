@@ -1,4 +1,4 @@
-name: Build OnePlus 11 Android 13 5.15 Kernel
+name: Build NUWA Android 13 5.15 Kernel
 
 on:
   workflow_call:  # This allows this workflow to be called from another workflow
@@ -60,7 +60,7 @@ jobs:
           
           # Initialize and sync kernel source
           echo "Initializing and syncing kernel source..."
-          repo init -u https://github.com/OnePlusOSS/kernel_manifest.git -b oneplus/sm8550 -m oneplus_11_v.xml --repo-rev=v2.16 --depth=1
+          repo init -u https://github.com/xiaomi-8550-kernel --depth=1
           
           # Sync repo and apply patches
           repo --version
